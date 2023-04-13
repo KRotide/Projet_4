@@ -1,5 +1,20 @@
 /****** General ***********/
-* {
+
+body {
     font-family: 'Roboto', sans-serif;
     font-family: 'Shrikhand', cursive;
+    margin: 0;
+}
+
+/****** Mes variables ***********/
+
+:root {
+    --main-bg-color: #f6f6f6;
+    --main-btn-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    --main-btn-shadow:  0px 4px 10px rgba(0, 0, 0, 0.25);
+    --scd-btn-color: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)),
+    linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    --scd-btn-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+    --btn-color: #99e2d0;
+    --btn-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
