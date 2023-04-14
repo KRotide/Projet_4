@@ -35,16 +35,13 @@ body {
     box-sizing: border-box;
 }
 
-.fa-arrow-left {
+.fa-solid {
     color: var(--icon-color);
-    width: 17.2px;
-    height: 16px;
 }
 
-.fa-location-dot {
-    color: var(--icon-color);
-    width: 12px;
-    height: 16px;
+h1,
+p {
+    font-family:'Roboto', sans-serif;
 }
 
 /****** Header ***********/
@@ -69,6 +66,8 @@ header {
 }
 
 .fa-arrow-left {
+    width: 17.2px;
+    height: 16px;
     padding-left: 23px;
     visibility: hidden;
 }
@@ -90,8 +89,12 @@ header {
     gap: 17px;
 }
 
+.fa-location-dot {
+    width: 12px;
+    height: 16px;
+}
+
 .location p {
-    font-family: 'Roboto', sans-serif;
     color: #353535;
 }
 
@@ -106,14 +109,12 @@ header {
     margin-bottom: 57px;
 }
 
-h1 {
-    font-family:'Roboto', sans-serif;
+.reservation h1 {
     width: 275px;
     padding-bottom: 12px;
 }
 
 .reservation p {
-    font-family:'Roboto', sans-serif;
     font-weight: 300;
     font-size: 18px;
     color: #353535;
@@ -136,6 +137,80 @@ h1 {
 
 /****** Functioning ***********/
 
+.functioning {
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 48px 20px 68px 20px;
+    gap: 26px;
+}
+
+.functioning .order-list {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    list-style: none;
+    counter-reset: compteListe;
+}
+
+.functioning .list {
+    font-family:'Roboto', sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: var(--main-bg-color);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    width: 322.49px;
+    height: 72.38px;
+    position: relative;
+    left: 12.51px;
+}
+
+.list:before {
+    content: counter(compteListe) "";
+    counter-increment: compteListe 1;
+    background: #9356DC;
+    border-radius: 25px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    position: relative;
+    right: 12px;
+}
+
+.fa-mobile-screen-button {
+    color: #7e7e7e;
+    width: 13.02px;
+    height: 19.9px;
+    padding-left: 9.98px;
+    padding-right: 27px;
+}
+
+.fa-list-ul {
+    color: #7e7e7e;
+    width: 16px;
+    height: 15.92px;
+    padding-left: 11px;
+    padding-right: 23px;
+}
+
+.fa-store {
+    color: #9356DC;
+    width: 18px;
+    height: 17.91px;
+    padding-left: 12px;
+    padding-right: 20px;
+}
+
+.order-list span {
+    font-family:'Roboto', sans-serif;
+}
 
 /****** Restaurants ***********/
 
