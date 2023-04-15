@@ -309,3 +309,50 @@ header {
 }
 
 /****** Footer ***********/
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px 25px;
+    gap: 16px;
+    background: #353535;
+    color: #FFFFFF;
+}
+
+footer h3 {
+    font-family:'Shrikhand', cursive;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 18px;
+}
+
+.links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+}
+
+.links a {
+    font-family:'Roboto', sans-serif;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.fa-utensils {
+    width: 11px;
+    height: 13px;
+    color: #FFFFFF;
+    padding-right: 11px;
+}
+
+.fa-handshake-angle {
+    width: 11.92px;
+    height: 13px;
+    color: #FFFFFF;
+    padding-right: 10.08px;
+}
