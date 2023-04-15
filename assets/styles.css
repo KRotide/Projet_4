@@ -40,6 +40,7 @@ body {
 }
 
 h1,
+h2,
 p {
     font-family:'Roboto', sans-serif;
 }
@@ -214,5 +215,97 @@ header {
 
 /****** Restaurants ***********/
 
+.restaurants {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.restaurants h1 {
+    width: 100%;
+    padding-top: 54px;
+    padding-left: 20px;
+    padding-bottom: 28px;
+}
+
+.restaurants-cards {
+    display: flex;
+    flex-direction: column;
+    padding-left: 17px;
+    padding-bottom: 66px;
+    gap: 18px;
+    position: relative;
+}
+
+.card {
+    overflow: hidden;
+    width: 340px;
+    height: 251px;
+    border-radius: 15px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: block;
+}
+
+.card img {
+    position: absolute;
+    left: -0.88%;
+    right: -0.88%;
+    top: -22.71%;
+    bottom: 30.68%;
+    width: 346px;
+    height: 231px;
+}
+
+.restaurants a {
+    color: black;
+    text-decoration: none;
+}
+
+.badge {
+    font-family:'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #008766;
+    text-align: center;
+    line-height: 2;
+    width: 80px;
+    height: 29px;
+    background: #99E2D0;
+    box-shadow: var(--btn-shadow);
+    border-radius: 2px;
+    position: absolute;
+    left: 248px;
+    bottom: 209px;
+}
+
+.restaurants h2 {
+    font-weight: 700;
+    font-size: 18px;
+    position: absolute;
+    left: 3.82%;
+    bottom: 16.33%;
+}
+
+.restaurants p {
+    font-weight: 300;
+    font-size: 17px;
+    position: absolute;
+    left: 3.82%;
+    bottom: 8%;
+}
+
+.restaurants i {
+    width: 22px;
+    height: 21px;
+    position: absolute;
+    left: 293px;
+    bottom: 33px;
+}
+
+.laNoteEnchantee {
+    object-fit: cover;
+}
 
 /****** Footer ***********/
