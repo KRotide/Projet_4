@@ -10,10 +10,9 @@
 
 :root {
     --main-bg-color: #f7f7f7;
-    --main-btn-color: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
-    --main-btn-shadow:  0px 4px 10px rgba(0, 0, 0, 0.25);
-    --scd-btn-color: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)),
-    linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    --main-btn-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    --main-btn-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    --scd-btn-color: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
     --scd-btn-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
     --btn-color: #99e2d0;
     --btn-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
@@ -102,6 +101,7 @@ header {
 /****** Reservation ***********/
 
 .reservation {
+    height: 191px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -123,17 +123,42 @@ header {
     width: 315px;
 }
 
-.reservation a {
+.box-content {
+    display: block;
+    position: relative;
+    left: -29%;
+    cursor: pointer;
+}
+
+.box-content .btn {
     width: 218px;
     height: 50px;
     border-radius: 25px;
-    font-family:'Roboto', sans-serif;
-    color: white;
+    position: absolute;
+    background: var(--main-btn-color);
+    transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+.txt-btn {
+    width: 218px;
+    height: 50px;
+    border-radius: 25px;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: var(--main-btn-color);
+    font-family:'Roboto', sans-serif;
+    color: white;
+    background-color: transparent;
     box-shadow: var(--main-btn-shadow);
+}
+
+.box-content .btn:hover {
+    background: var(--scd-btn-color);
+}
+
+.txt-btn:hover {
+    box-shadow: var(--scd-btn-shadow);
 }
 
 /****** Functioning ***********/
