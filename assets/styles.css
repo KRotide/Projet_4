@@ -10,9 +10,9 @@
 
 :root {
     --main-bg-color: #f7f7f7;
-    --main-btn-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    --main-btn-color: linear-gradient(355deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
     --main-btn-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    --scd-btn-color: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    --scd-btn-color: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(355deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
     --scd-btn-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
     --btn-color: #99e2d0;
     --btn-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
@@ -30,8 +30,7 @@ body {
 
 .main-container {
     width: 100%;
-    max-width: 600px;
-    box-sizing: border-box;
+    max-width: 768px;
 }
 
 .fa-solid {
@@ -47,6 +46,7 @@ p {
 /****** Header ***********/
 
 header {
+    width: 100%;
     height: 113px;
     display: flex;
     flex-direction: column;
@@ -58,7 +58,7 @@ header {
     height: 63px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     background-color: #FFFFFF;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);;
@@ -68,12 +68,12 @@ header {
 .fa-arrow-left {
     width: 17.2px;
     height: 16px;
-    padding-left: 23px;
+    position: absolute;
+    left: 4.53%;
     visibility: hidden;
 }
 
 .logo {
-    padding-left: 64.8px;
     width: 162px;
     height: 44px;
 }
@@ -101,7 +101,6 @@ header {
 /****** Reservation ***********/
 
 .reservation {
-    height: 191px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -116,48 +115,29 @@ header {
 }
 
 .reservation p {
+    width: 315px;
+    padding-bottom: 27px;
     font-weight: 300;
     font-size: 18px;
-    color: #353535;
-    padding-bottom: 27px;
-    width: 315px;
 }
 
-.box-content {
-    display: block;
-    position: relative;
-    left: -29%;
-    cursor: pointer;
-}
-
-.box-content .btn {
+.reservation a {
     width: 218px;
     height: 50px;
     border-radius: 25px;
-    position: absolute;
-    background: var(--main-btn-color);
-    transform: matrix(1, 0, 0, -1, 0, 0);
-}
-
-.txt-btn {
-    width: 218px;
-    height: 50px;
-    border-radius: 25px;
-    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family:'Roboto', sans-serif;
-    color: white;
-    background-color: transparent;
+    cursor: pointer;
+    background-image: var(--main-btn-color);
     box-shadow: var(--main-btn-shadow);
+    transition: background-image 450ms, box-shadow 350ms;
 }
 
-.box-content .btn:hover {
-    background: var(--scd-btn-color);
-}
-
-.txt-btn:hover {
+.reservation a:hover {
+    background-image: var(--scd-btn-color);
     box-shadow: var(--scd-btn-shadow);
 }
 
@@ -274,6 +254,7 @@ header {
 }
 
 .card img {
+    object-fit: cover;
     position: absolute;
     left: -0.88%;
     right: -0.88%;
@@ -301,8 +282,8 @@ header {
     box-shadow: var(--btn-shadow);
     border-radius: 2px;
     position: absolute;
-    left: 248px;
-    bottom: 209px;
+    right: 12px;
+    top: 13px;
 }
 
 .restaurants h2 {
@@ -311,6 +292,9 @@ header {
     position: absolute;
     left: 3.82%;
     bottom: 16.33%;
+    width: 267px;
+    height: 20px;
+    line-height: 21.09px;
 }
 
 .restaurants p {
@@ -318,25 +302,27 @@ header {
     font-size: 17px;
     position: absolute;
     left: 3.82%;
-    bottom: 8%;
+    bottom: 4.78%;
+    width: 247px;
+    height: 24px;
+    line-height: 19.92px;
 }
 
 .restaurants i {
     width: 22px;
     height: 21px;
     position: absolute;
-    left: 293px;
+    right: 23px;
     bottom: 33px;
 }
 
-.laNoteEnchantee {
-    object-fit: cover;
+.fa-heart:active {
+    background-image: var(--main-btn-color);
 }
 
 /****** Footer ***********/
 
 footer {
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -380,4 +366,151 @@ footer h3 {
     height: 13px;
     color: #FFFFFF;
     padding-right: 10.08px;
+}
+
+/* Le code ci-dessous correspond à la version responsive uniquement */
+
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+
+
+/* Large devices (desktop, more than 1024px) */
+@media (min-width: 1024px) {
+    .main-container {
+        max-width: unset;
+        min-width: 1024px;
+    }
+
+/****** Header ***********/
+
+    header {
+        height: 146px;
+    }
+
+    .logo-group {
+        height: 96px;
+    }
+    
+    .fa-arrow-left {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .logo {
+        width: 200px;
+        height: 34.2px;
+    }
+
+/****** Reservation ***********/
+
+    .reservation {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .reservation h1 {
+        font-size: 40px;
+        width: 645px;
+        padding-bottom: 18px;
+    }
+
+    .reservation p {
+        width: 531px;
+        padding-bottom: 18px;
+    }
+
+/****** Functioning ***********/
+
+    .functioning {
+        padding: 50px 180px;
+        gap: 25px;
+    }
+
+    .functioning .order-list {
+        flex-direction: row;
+        gap: 36.51px;
+    }
+
+/****** Restaurants ***********/
+
+    .restaurants {
+        padding: 30px 180px;
+        gap: 28px;
+    }
+
+    .restaurants h1 {
+        padding-top: 0px;
+        padding-left: 0px;
+        padding-bottom: 0px;
+    }
+
+    .restaurants-cards {
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding-left: unset;
+        padding-bottom: unset;
+        gap: 50px;
+    }
+
+    .card {
+        width: 490px;
+    }
+
+    .card img {
+        width: 498.65px;
+    }
+    
+    .badge {
+        right: 17.59px;
+    }
+    
+    .restaurants h2 {
+        width: 384.79px;
+    }
+    
+    .restaurants p {
+        width: 355.97px;
+        line-height: 20px;
+    }
+
+    .card1 {
+        margin-right: 50px;
+    }
+
+    .card3 {
+        margin-right: 50px;
+    }
+
+/****** Footer ***********/
+
+    footer {
+        height: 114px;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        padding: 30px 25px;
+    }
+
+    footer h3 {
+        width: 137.58px;
+        height: 27px;
+        line-height: 26.24px;
+    }
+
+    .links {
+        flex-direction: row;
+    }
+
+    .link1,
+    .link2 {
+        display: inline-flex;
+        width: 190px;
+        height: 19px;
+    }
+
+    .link3,
+    .link4 {
+        display: inline-flex;
+        width: 130px;
+        height: 20px;
+    }
 }
