@@ -30,7 +30,7 @@ body {
 
 .main-container {
     width: 100%;
-    max-width: 768px;
+    max-width: 1086px;
 }
 
 .fa-solid {
@@ -147,9 +147,15 @@ header {
     background: #FFFFFF;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 48px 20px 68px 20px;
+    align-items: center;
+    padding-top: 48px;
+    padding-bottom: 68px;
     gap: 26px;
+}
+
+.functioning h1 {
+    position: relative;
+    left: -73px;
 }
 
 .functioning .order-list {
@@ -207,11 +213,23 @@ header {
 }
 
 .fa-store {
-    color: #9356DC;
+    color: #7e7e7e;
     width: 18px;
     height: 17.91px;
     padding-left: 12px;
     padding-right: 20px;
+}
+
+.fa-mobile-screen-button:hover {
+    color: #9356DC;
+}
+
+.fa-list-ul:hover {
+    color: #9356DC;
+}
+
+.fa-store:hover {
+    color: #9356DC;
 }
 
 .order-list span {
@@ -223,23 +241,22 @@ header {
 .restaurants {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    padding-top: 54px;
+    padding-bottom: 66px;
+    gap: 28px;
 }
 
 .restaurants h1 {
-    width: 100%;
-    padding-top: 54px;
-    padding-left: 20px;
-    padding-bottom: 28px;
+    text-align: center;
+    position: relative;
+    left: -96px;
 }
 
 .restaurants-cards {
     display: flex;
     flex-direction: column;
-    padding-left: 17px;
-    padding-bottom: 66px;
     gap: 18px;
-    position: relative;
 }
 
 .card {
@@ -368,17 +385,11 @@ footer h3 {
     padding-right: 10.08px;
 }
 
-/* Le code ci-dessous correspond à la version responsive uniquement */
-
-/****** Media queries ***********/
-/* Medium devices (tablets, less/equal than 1024px) */
-
-
-/* Large devices (desktop, more than 1024px) */
-@media (min-width: 1024px) {
+/* Large devices (desktop, more than 1086px) */
+@media (min-width: 1086px) {
     .main-container {
         max-width: unset;
-        min-width: 1024px;
+        min-width: 1086px;
     }
 
 /****** Header ***********/
@@ -422,8 +433,13 @@ footer h3 {
 /****** Functioning ***********/
 
     .functioning {
-        padding: 50px 180px;
+        padding-top: 50px;
+        padding-bottom: 50px;
         gap: 25px;
+    }
+
+    .functioning h1 {
+        left: -433px;
     }
 
     .functioning .order-list {
@@ -434,22 +450,20 @@ footer h3 {
 /****** Restaurants ***********/
 
     .restaurants {
-        padding: 30px 180px;
-        gap: 28px;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     .restaurants h1 {
-        padding-top: 0px;
-        padding-left: 0px;
-        padding-bottom: 0px;
+        left: -456px;
     }
 
     .restaurants-cards {
-        flex-wrap: wrap;
-        flex-direction: row;
-        padding-left: unset;
-        padding-bottom: unset;
-        gap: 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        column-gap: 100px;
+        row-gap: 50px;
     }
 
     .card {
@@ -471,14 +485,6 @@ footer h3 {
     .restaurants p {
         width: 355.97px;
         line-height: 20px;
-    }
-
-    .card1 {
-        margin-right: 50px;
-    }
-
-    .card3 {
-        margin-right: 50px;
     }
 
 /****** Footer ***********/
