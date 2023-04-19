@@ -1,0 +1,404 @@
+/****** Header ***********/
+
+header {
+    width: 100%;
+    height: 113px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-group {
+    width: 100%;
+    height: 63px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);;
+    z-index: 1;
+}
+
+.fa-arrow-left {
+    width: 17.2px;
+    height: 16px;
+    position: absolute;
+    left: 4.53%;
+    visibility: hidden;
+}
+
+.logo {
+    width: 162px;
+    height: 44px;
+}
+
+.location {
+    width: 100%;
+    height: 50px;
+    background-color: #eaeaea;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 17px;
+}
+
+.fa-location-dot {
+    width: 12px;
+    height: 16px;
+}
+
+.location p {
+    color: #353535;
+}
+
+/****** Reservation ***********/
+
+.reservation {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-top: 39.5px;
+    margin-bottom: 57px;
+}
+
+.reservation h1 {
+    width: 275px;
+    padding-bottom: 12px;
+}
+
+.reservation p {
+    width: 315px;
+    padding-bottom: 27px;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.reservation a {
+    width: 218px;
+    height: 50px;
+    border-radius: 25px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-image: var(--main-btn-color);
+    box-shadow: var(--main-btn-shadow);
+    transition: background-image 450ms, box-shadow 350ms;
+}
+
+.reservation a:hover {
+    background-image: var(--scd-btn-color);
+    box-shadow: var(--scd-btn-shadow);
+}
+
+/****** Functioning ***********/
+
+.functioning {
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 48px;
+    padding-bottom: 68px;
+    gap: 26px;
+}
+
+.functioning h1 {
+    position: relative;
+    left: -73px;
+}
+
+.functioning .order-list {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    list-style: none;
+    counter-reset: compteListe;
+}
+
+.functioning .list {
+    font-family:'Roboto', sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: var(--main-bg-color);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    width: 322.49px;
+    height: 72.38px;
+    position: relative;
+    left: 12.51px;
+}
+
+.list:before {
+    content: counter(compteListe) "";
+    counter-increment: compteListe 1;
+    background: #9356DC;
+    border-radius: 25px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    position: relative;
+    right: 12px;
+}
+
+.fa-mobile-screen-button {
+    color: #7e7e7e;
+    width: 13.02px;
+    height: 19.9px;
+    padding-left: 9.98px;
+    padding-right: 27px;
+}
+
+.fa-list-ul {
+    color: #7e7e7e;
+    width: 16px;
+    height: 15.92px;
+    padding-left: 11px;
+    padding-right: 23px;
+}
+
+.fa-store {
+    color: #7e7e7e;
+    width: 18px;
+    height: 17.91px;
+    padding-left: 12px;
+    padding-right: 20px;
+}
+
+.fa-mobile-screen-button:hover {
+    color: #9356DC;
+}
+
+.fa-list-ul:hover {
+    color: #9356DC;
+}
+
+.fa-store:hover {
+    color: #9356DC;
+}
+
+.order-list span {
+    font-family:'Roboto', sans-serif;
+}
+
+/****** Restaurants ***********/
+
+.restaurants {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 54px;
+    padding-bottom: 66px;
+    gap: 28px;
+}
+
+.restaurants h1 {
+    text-align: center;
+    position: relative;
+    left: -96px;
+}
+
+.restaurants-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.card {
+    overflow: hidden;
+    width: 340px;
+    height: 251px;
+    border-radius: 15px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: block;
+}
+
+.card img {
+    object-fit: cover;
+    position: absolute;
+    left: -0.88%;
+    right: -0.88%;
+    top: -22.71%;
+    bottom: 30.68%;
+    width: 346px;
+    height: 231px;
+}
+
+.restaurants a {
+    color: black;
+    text-decoration: none;
+}
+
+.badge {
+    font-family:'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #008766;
+    text-align: center;
+    line-height: 2;
+    width: 80px;
+    height: 29px;
+    background: #99E2D0;
+    box-shadow: var(--btn-shadow);
+    border-radius: 2px;
+    position: absolute;
+    right: 12px;
+    top: 13px;
+}
+
+.restaurants h2 {
+    font-weight: 700;
+    font-size: 18px;
+    position: absolute;
+    left: 3.82%;
+    bottom: 16.33%;
+    width: 267px;
+    height: 20px;
+    line-height: 21.09px;
+}
+
+.restaurants p {
+    font-weight: 300;
+    font-size: 17px;
+    position: absolute;
+    left: 3.82%;
+    bottom: 4.78%;
+    width: 247px;
+    height: 24px;
+    line-height: 19.92px;
+}
+
+.restaurants i {
+    font-size: 1.4em;
+    position: absolute;
+    right: 23px;
+    bottom: 33px;
+}
+
+.colorless-heart:focus {
+    color: transparent;
+}
+
+.color-heart {
+    visibility: hidden;
+}
+
+.color-heart:focus {
+    visibility: visible;
+    background: var(--main-btn-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+/* Large devices (desktop, more than 1086px) */
+@media (min-width: 1086px) {
+
+/****** Header ***********/
+
+    header {
+        height: 146px;
+    }
+
+    .logo-group {
+        height: 96px;
+    }
+    
+    .fa-arrow-left {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .logo {
+        width: 200px;
+        height: 34.2px;
+    }
+
+/****** Reservation ***********/
+
+    .reservation {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .reservation h1 {
+        font-size: 40px;
+        width: 645px;
+        padding-bottom: 18px;
+    }
+
+    .reservation p {
+        width: 531px;
+        padding-bottom: 18px;
+    }
+
+/****** Functioning ***********/
+
+    .functioning {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        gap: 25px;
+    }
+
+    .functioning h1 {
+        left: -433px;
+    }
+
+    .functioning .order-list {
+        flex-direction: row;
+        gap: 36.51px;
+    }
+
+/****** Restaurants ***********/
+
+    .restaurants {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .restaurants h1 {
+        left: -456px;
+    }
+
+    .restaurants-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        column-gap: 100px;
+        row-gap: 50px;
+    }
+
+    .card {
+        width: 490px;
+    }
+
+    .card img {
+        width: 498.65px;
+    }
+    
+    .badge {
+        right: 17.59px;
+    }
+    
+    .restaurants h2 {
+        width: 384.79px;
+    }
+    
+    .restaurants p {
+        width: 355.97px;
+        line-height: 20px;
+    }
+}
