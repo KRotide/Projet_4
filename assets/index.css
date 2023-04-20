@@ -21,10 +21,9 @@ header {
 }
 
 .fa-arrow-left {
-    width: 17.2px;
-    height: 16px;
+    font-size: 1.2em;
     position: absolute;
-    left: 4.53%;
+    left: 23px;
     visibility: hidden;
 }
 
@@ -315,11 +314,6 @@ header {
 
     .logo-group {
         height: 96px;
-    }
-    
-    .fa-arrow-left {
-        width: 30px;
-        height: 30px;
     }
     
     .logo {
