@@ -85,6 +85,7 @@ header {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    text-decoration: none;
     background-image: var(--main-btn-color);
     box-shadow: var(--main-btn-shadow);
     transition: background-image 450ms, box-shadow 350ms;

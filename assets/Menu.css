@@ -49,6 +49,8 @@
     min-width: 320px;
     max-width: 1055px;
     margin: auto;
+    padding-left: 13px;
+    padding-right: 13px;
 }
 
 .card {
@@ -82,7 +84,7 @@
 
 .menu-title {
     height: 27px;
-    width: 93%;
+    width: 96%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 28px;
@@ -228,24 +230,23 @@
         width: 100%;
         height: 956.14px;
         left: 0;
-        top: -345px;
+        top: -330px;
     }
 
 /****** Menu ***********/
 
     .menu {
         min-width: 1086px;
+        padding-left: unset;
+        padding-right: unset;
+    }
+
+    .card {
+        margin-top: -1.8em;
     }
 
     .restaurant-title {
         padding-top: 51px;
-    }
-
-    .menu-title {
-        height: 27px;
-        width: 93%;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     .restaurant-menu {
