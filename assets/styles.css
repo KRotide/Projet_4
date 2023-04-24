@@ -12,10 +12,9 @@
     --main-bg-color: #f7f7f7;
     --main-btn-color: linear-gradient(355deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
     --main-btn-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    --scd-btn-color: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(355deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
-    --scd-btn-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
     --btn-color: #99e2d0;
     --btn-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    --heart-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
     --icon-color: #353535;
 }
 

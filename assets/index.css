@@ -16,7 +16,7 @@ header {
     justify-content: center;
     align-items: center;
     background-color: #FFFFFF;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);;
+    box-shadow: var(--btn-shadow);
     z-index: 1;
 }
 
@@ -64,12 +64,12 @@ header {
 }
 
 .reservation h1 {
-    width: 275px;
+    width: 73.33%;
     padding-bottom: 12px;
 }
 
 .reservation p {
-    width: 315px;
+    width: 84%;
     padding-bottom: 27px;
     font-weight: 300;
     font-size: 18px;
@@ -88,12 +88,12 @@ header {
     text-decoration: none;
     background-image: var(--main-btn-color);
     box-shadow: var(--main-btn-shadow);
-    transition: background-image 450ms, box-shadow 350ms;
+    transition: 350ms ease-in-out;
 }
 
 .reservation a:hover {
-    background-image: var(--scd-btn-color);
-    box-shadow: var(--scd-btn-shadow);
+    opacity: 0.84;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.41);
 }
 
 /****** Functioning ***********/
@@ -102,15 +102,8 @@ header {
     background: #FFFFFF;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-top: 48px;
-    padding-bottom: 68px;
+    padding: 48px 20px 68px 20px;
     gap: 26px;
-}
-
-.functioning h1 {
-    position: relative;
-    left: -73px;
 }
 
 .functioning .order-list {
@@ -130,7 +123,7 @@ header {
     background: var(--main-bg-color);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
-    width: 322.49px;
+    width: 98%;
     height: 72.38px;
     position: relative;
     left: 12.51px;
@@ -196,16 +189,8 @@ header {
 .restaurants {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-top: 54px;
-    padding-bottom: 66px;
+    padding: 54px 20px 66px 20px;
     gap: 28px;
-}
-
-.restaurants h1 {
-    text-align: center;
-    position: relative;
-    left: -96px;
 }
 
 .restaurants-cards {
@@ -216,7 +201,7 @@ header {
 
 .card {
     overflow: hidden;
-    width: 340px;
+    width: 100%;
     height: 251px;
     border-radius: 15px;
     background: #FFFFFF;
@@ -232,7 +217,7 @@ header {
     right: -0.88%;
     top: -22.71%;
     bottom: 30.68%;
-    width: 346px;
+    width: 101.8%;
     height: 231px;
 }
 
@@ -285,23 +270,24 @@ header {
     position: absolute;
     right: 23px;
     bottom: 33px;
-}
-
-.colorless-heart:focus {
-    color: transparent;
+    transition: opacity 800ms ease-in-out;
 }
 
 .color-heart {
-    visibility: hidden;
-}
-
-.color-heart:focus {
-    visibility: visible;
-    background: var(--main-btn-color);
+    opacity: 0;
+    background: var(--heart-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
+}
+
+.colorless-heart:hover {
+    opacity: 0;
+}
+
+.color-heart:hover {
+    opacity: 1;
 }
 
 /* Large devices (desktop, more than 1086px) */
@@ -343,13 +329,14 @@ header {
 /****** Functioning ***********/
 
     .functioning {
-        padding-top: 50px;
-        padding-bottom: 50px;
+        align-items: center;
+        padding: 50px 0px 50px 0px;
         gap: 25px;
     }
 
     .functioning h1 {
-        left: -433px;
+        position: relative;
+        left: -452px;
     }
 
     .functioning .order-list {
@@ -357,15 +344,22 @@ header {
         gap: 36.51px;
     }
 
+    .functioning .list {
+        width: 322.49px;
+        left: -6px;
+    }
+
 /****** Restaurants ***********/
 
     .restaurants {
-        padding-top: 30px;
-        padding-bottom: 30px;
+        align-items: center;
+        padding: 30px 0px 30px 0px;
     }
 
     .restaurants h1 {
-        left: -456px;
+        text-align: center;
+        position: relative;
+        left: -474px;
     }
 
     .restaurants-cards {

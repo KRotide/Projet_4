@@ -14,7 +14,7 @@
     justify-content: center;
     align-items: center;
     background-color: #FFFFFF;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--btn-shadow);
     z-index: 1;
 }
 
@@ -49,8 +49,6 @@
     min-width: 320px;
     max-width: 1055px;
     margin: auto;
-    padding-left: 13px;
-    padding-right: 13px;
 }
 
 .card {
@@ -62,24 +60,46 @@
 }
 
 .restaurant-title {
-    padding-top: 32px;
-    padding-bottom: 12px;
+    padding: 32px 17px 12px 17px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 24px;
+}
+
+.restaurant-title h4 {
+    margin-right: 50px;
 }
 
 .restaurant-title i {
     font-size: 1.4em;
-    width: 22px;
-    height: 21px;
+    transition: opacity 800ms ease-in-out;
+    position: absolute;
+    right: 41px;
+}
+
+.color-heart {
+    opacity: 0;
+    background: var(--heart-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+.colorless-heart:hover {
+    opacity: 0;
+}
+
+.color-heart:hover {
+    opacity: 1;
 }
 
 .restaurant-menu {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    padding-left: 13px;
+    padding-right: 13px;
 }
 
 .menu-title {
@@ -102,10 +122,7 @@
 
 .choices {
     height: 45px;
-    width: 93%;
     padding: 12px 5px 12px 15px;
-    margin-left: auto;
-    margin-right: auto;
     display: flex;
     background-color: #FFFFFF;
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
@@ -138,7 +155,7 @@
     justify-content: flex-end;
     align-items: flex-end;
     padding-left: 5px;
-    padding-right: 16px;
+    padding-right: 13.5px;
 }
 
 .select-button {
@@ -191,12 +208,12 @@
     cursor: pointer;
     background-image: var(--main-btn-color);
     box-shadow: var(--main-btn-shadow);
-    transition: background-image 450ms, box-shadow 350ms;
+    transition: 350ms ease-in-out;
 }
 
 .order-button a:hover {
-    background-image: var(--scd-btn-color);
-    box-shadow: var(--scd-btn-shadow);
+    opacity: 0.84;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.41);
 }
 
 /* Large devices (desktop, more than 1086px) */
@@ -237,6 +254,9 @@
 
     .menu {
         min-width: 1086px;
+        width: 60%;
+        margin-right: auto;
+        margin-left: auto;
         padding-left: unset;
         padding-right: unset;
     }
@@ -247,11 +267,34 @@
 
     .restaurant-title {
         padding-top: 51px;
+        justify-content: center;
+    }
+
+    .restaurant-title h4 {
+        margin-right: 24px;
+    }
+
+    .restaurant-title i {
+        right: unset;
+        position: relative;
+    }
+
+    .color-heart {
+        left: -22.4px;
     }
 
     .restaurant-menu {
-        width: 60%;
-        margin-right: auto;
-        margin-left: auto;
+        padding-left: 210px;
+        padding-right: 211px;
+    }
+
+    .menu-title {
+        width: unset;
+        margin-left: unset;
+        margin-right: unset;
+    }
+
+    .choices {
+        width: 100%;
     }
 }
