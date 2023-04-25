@@ -118,12 +118,14 @@
 
 .choices {
     height: 45px;
-    padding: 12px 5px 12px 15px;
+    padding: 12px 0px 12px 15px;
     display: flex;
     background-color: #FFFFFF;
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     position: relative;
+    animation-fill-mode: both;
+    overflow: hidden;
 }
 
 .choice {
@@ -154,7 +156,8 @@
     justify-content: flex-end;
     align-items: flex-end;
     padding-left: 5px;
-    padding-right: 13.5px;
+    padding-right: 15px;
+    transition: 800ms ease-in-out;
 }
 
 .select-button {
@@ -163,8 +166,9 @@
     background-color: #99e2d0;
     border-radius: 0px 15px 15px 0px;
     position: absolute;
-    right: 0;
+    right: -60px;
     bottom: 0;
+    transition: 800ms ease-in-out;
 }
 
 .select-button i {
@@ -181,8 +185,12 @@
     left: 19.5px;
 }
 
-.select-button:hover {
-    opacity: 0;
+.choices:hover .select-button {
+    right: 0px;
+}
+
+.choices:hover .price {
+    padding-right: 74px;
 }
 
 /****** Bouton Commander ***********/
