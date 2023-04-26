@@ -74,6 +74,7 @@
     transition: opacity 800ms ease-in-out;
     position: absolute;
     right: 41px;
+    cursor: pointer;
 }
 
 .color-heart {
@@ -124,9 +125,64 @@
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     position: relative;
-    animation-fill-mode: both;
     overflow: hidden;
+    cursor: pointer;
 }
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+.fade-in-delay-1 {
+    animation-delay: 0.2s;
+}
+
+.fade-in-delay-2 {
+    animation-delay: 0.4s;
+}
+
+.fade-in-delay-3 {
+    animation-delay: 0.6s;
+}
+
+.fade-in-delay-4 {
+    animation-delay: 0.8s;
+}
+
+.fade-in-delay-5 {
+    animation-delay: 1s;
+}
+
+.fade-in-delay-6 {
+    animation-delay: 1.2s;
+}
+
+.fade-in-delay-7 {
+    animation-delay: 1.4s;
+}
+
+.fade-in-delay-8 {
+    animation-delay: 1.6s;
+}
+
+.fade-in-delay-9 {
+    animation-delay: 1.8s;
+}
+
+.fade-in-delay-10 {
+    animation-delay: 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 
 .choice {
     width: 100%;
